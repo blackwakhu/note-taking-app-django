@@ -1,4 +1,5 @@
 # Note Taking Django App
+this application allows the user to create a note, see the note, delete it or modify the note
 ## Project prequisites
 the following prerequisites are required for the project to work
 1. any operating system
