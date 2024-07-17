@@ -7,19 +7,21 @@
   {% if data|length > 0 %}
     <div>
       {% for x in data %}
-        <div class="note-card">
-          <table>
-            <tr>
-              <td>title:</td>
-              <td>{{x.title}}</td>
-            </tr>
-            <tr>
-              <td>category:</td>
-              <td>{{x.category}}</td>
-            </tr>
-          </table>
-          <p>{{x.content|slice:":20"}} ...</p>
-        </div>
+        <a href="{% url 'note' note_id=x.id %}"> 
+          <div class="note-card">
+            <table>
+              <tr>
+                <td>title:</td>
+                <td>{{x.title}}</td>
+              </tr>
+              <tr>
+                <td>category:</td>
+                <td>{{x.category}}</td>
+              </tr>
+            </table>
+            <p>{{x.content|slice:":20"}} ...</p>
+          </div>
+        </a>
       {% endfor %}
     </div>
   {% else %}

@@ -19,3 +19,6 @@ def new_notes(request):
     note.save()
     return redirect("/")
   return render(request, 'new_notes.html')
+
+def note(request, note_id):
+  return render(request, 'note.html')
