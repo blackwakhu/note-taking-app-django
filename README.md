@@ -1,4 +1,9 @@
 # Note Taking Django App
+## Project prequisites
+the following prerequisites are required for the project to work
+1. any operating system
+2. python 3.10 or higher
+3. sqlite3 installed
 ## How to get the project
 1. clone the project
    ```git

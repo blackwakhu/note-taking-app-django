@@ -10,4 +10,4 @@ class Notes(models.Model):
   date_modified = models.DateTimeField(auto_now=True)
 
   def __str__(self):
-    return self.title
+    return f"title: {self.title}"

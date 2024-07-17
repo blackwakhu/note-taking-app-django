@@ -4,5 +4,35 @@
 
 {% block content %}
   <h1>New Notes</h1>
+  <form method="post" action="{% url 'new_notes' %}">
+    {% csrf_token %}
+    <div class="new-note-input">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" class="new-note-input" placeholder="to do list" required>
+    </div>
+    <div class="new-note-input">
+      <label for="category">Category:</label>
+      <select name="category" id="category" class="new-note-input" required>
+        <optgroup label="Personnal">
+          <option value="Personnal">Personnal</option>
+          <option value="Family Affair">Family Affair</option>
+          <option value="Health">Health</option>
+        </optgroup>
+        <optgroup label="Activities">
+          <option value="Study">Study</option>
+          <option value="Shopping">Shopping</option>
+        </optgroup>
+        <optgroup label="Business">
+          <option value="Office">Office</option>
+          <option value="Work">Work</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="new-note-input">
+      <label for="Content">Content:</label>
+      <textarea name="content" id="content" cols="30" class="new-note-input" rows="10" placeholder="write your notes here" required"></textarea>
+    </div>
+    <input type="submit" value="Submit"/>
+  </form>
 
 {% endblock %}
