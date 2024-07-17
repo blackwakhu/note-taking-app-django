@@ -1,7 +1,47 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}
+{% if item is not null %}
+  {{item.title}}
+{% else %}
+  The item does not exist
+{% endif %}
+{% endblock %}
 
 {% block content %}
+  {% if item is not null %}
+    <div>
+      <h1>{{item.title}}</h1>
+    </div>
+    <div>
+      <table>
+        <tbody>
+          <tr>
+            <th>Title:</th>
+            <td>{{item.title}}</td>
+          </tr>
+          <tr>
+            <th>Category:</th>
+            <td>{{item.category}}</td>
+          </tr>
+          <tr>
+            <th>Date created</th>
+            <td>{{item.date_created}}</td>
+          </tr>
+          <tr>
+            <th>Date Modified</th>
+            <td>{{item.date_modified}}</td>
+          </tr>
+        </tbody>
+        
+      </table
+      <p>
+        <span>Content</span><br>
+        <span>{{item.content}}</span>
+      </p>
+    </div>
+  {% else %}
+    <h1>The Item does not exist</h1>
+  {% endif %}
 
 {% endblock %}

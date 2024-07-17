@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 
 from .models import Notes
 
@@ -21,4 +21,5 @@ def new_notes(request):
   return render(request, 'new_notes.html')
 
 def note(request, note_id):
-  return render(request, 'note.html')
+  item = get_object_or_404(Notes, pk=note_id)
+  return render(request, 'note.html', {"item": item})
