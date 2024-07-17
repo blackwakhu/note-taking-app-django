@@ -1,0 +1,30 @@
+.menu-table-note {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  background: #333;
+  color: white;
+}
+
+.menu-table-note td {
+  padding: 10px;
+}
+
+.th-menu-note, .td-menu-note{
+  width: 20%;
+}
+
+.th-menu-note:hover, .td-menu-note:hover{
+  border-bottom: solid 4px #ffff80;
+  background-color: #111;
+}
+
+.end-col-menu{
+  width: 40%;
+}
+
+.one-a{
+  text-decoration: none;
+  color: inherit;
+}
