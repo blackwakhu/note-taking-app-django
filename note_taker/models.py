@@ -8,3 +8,6 @@ class Notes(models.Model):
   category = models.CharField(max_length=25)
   date_created = models.DateTimeField(auto_now_add=True)
   date_modified = models.DateTimeField(auto_now=True)
+
+  def __str__(self):
+    return self.title
