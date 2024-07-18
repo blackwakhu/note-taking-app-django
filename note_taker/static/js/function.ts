@@ -20,3 +20,11 @@ edit_note_btn.addEventListener('click', function(){
   home_note_div.style.display = "none"
   edit_note_div.style.display = "inherit"
 })
+
+// form elements
+
+let new_note_submit = document.querySelector<HTMLInputElement>("#new-note-submit")
+
+new_note_submit.addEventListener('click', function(){
+  alert("<h1>Submitted</h1>")
+})

@@ -71,3 +71,68 @@ header a:hover{
   background-color: #10898d;
   color: beige;
 }
+
+/* dealing with form elements */
+
+textarea{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5px;
+  border: none;
+  background: whitesmoke;
+  border-bottom: solid 3px black;
+  font-size: 1.1em
+}
+
+/* label{
+  margin-left: 10%;
+} */
+
+.new-note-input{
+  margin-left: 10%;
+  display: flex;
+  width: 80%;
+  margin-top: 10px;
+}
+
+.new-note-input-txt label{
+  margin-left: 10%;
+}
+
+input[type='submit']{
+  margin-left: 40%;
+  margin-top: 10px;
+  min-width: 10%;
+  padding: 7px;
+  background: white;
+  color: #008000;
+  border: solid 2px #008000;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+input[type='submit']:hover{
+  background: #008000;
+  color: white;
+}
+
+select{
+  width: 100%;
+  background: none;
+  padding: 8px;
+  border: none;
+  background: whitesmoke;
+}
+
+option, optgroup{
+  width: 70%;
+}
+
+input[type='text']{
+  width: 100%;
+  border: none;
+  background: whitesmoke;
+  padding: 8px;
+  font-size: 1.1em;
+}
