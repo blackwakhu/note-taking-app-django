@@ -10,29 +10,16 @@
 
 {% block content %}
   {% if item is not null %}
-    <div>
-      <table class="menu-table-note menu-table">
-        <tbody>
-          <tr>
-            <th class="th-menu-note home-note-btn">
-              <a href="#" class="nav-a  one-a">
-                {{item.title}}
-              </a>
-            </th>
-            <td class="td-menu-note edit-note-btn">
-              <a href="#" class="nav-a  one-a">
-                Edit
-              </a>
-            </td>
-            <td class="td-menu-note delete-note-btn">
-              <a href="{% url 'delete_note' note_id=item.id %}" class="nav-a  one-a">
-                Delete
-              </a>
-            </td>
-            <td  class="td-menu-note" id="end-col-menu"></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="note-navbar">
+      <a href="#" class="nav-a  one-a active home-note-btn">
+        {{item.title}}
+      </a>
+      <a href="#" class="nav-a  one-a edit-note-btn">
+        Edit
+      </a>
+      <a href="{% url 'delete_note' note_id=item.id %}" class="nav-a  one-a  delete-note-btn">
+        Delete
+      </a>
     </div>
     <div class="home-note-content" >
       <table>

@@ -4,49 +4,36 @@
 
 /* note html */
 
-.menu-table-note {
-  margin-bottom: 10px;
-  background: #333;
+.note-navbar{
+  background-color: #333;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+.note-navbar a{
+  color: inherit;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+  float: left;
+  font-size: 1.1em;
+  border-right: 2px solid beige;
+  width: 20%;
+}
+
+.note-navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.note-navbar a.active {
+  background-color: #04AA6D;
   color: white;
 }
 
 .edit-note-content{
   display: none;
-}
-
-.menu-table-note td {
-  padding: 10px;
-}
-
-.th-menu-note, .td-menu-note{
-  width: 20%;
-}
-
-.th-menu-note:hover, .td-menu-note:hover{
-  border-bottom: solid 4px #ffff80;
-  background-color: #111;
-  width: 20%;
-}
-
-#end-col-menu-main{
-  width: 40%;
-}
-
-.end-col-menu{
-  width: 40%;
-}
-
-.one-a{
-  text-decoration: none;
-  color: inherit;
-}
-
-/* menu table */
-
-.menu-table{
-  border-collapse: collapse;
-  width: 100%;
-  margin: 0;
 }
 
 /* main navbar */
@@ -68,6 +55,7 @@ header a{
   padding: 14px 16px; 
   font-size: 1.1em;
   border-right: solid 2px beige;
+  width: 20%;
 }
 
 header a.active{
