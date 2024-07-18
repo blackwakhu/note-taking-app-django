@@ -16,7 +16,11 @@ edit_note_btn.addEventListener('click', function () {
     edit_note_div.style.display = "inherit";
 });
 // form elements
-var new_note_submit = document.querySelector("#new-note-submit");
+var new_note_submit = document.getElementById("new-note-submit");
+var edit_note_submit = document.querySelector("#edit-note-submit");
 new_note_submit.addEventListener('click', function () {
-    alert("<h1>Submitted</h1>");
+    alert("Submitted");
+});
+edit_note_submit.addEventListener('click', function () {
+    alert("submitted");
 });

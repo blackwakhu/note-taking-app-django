@@ -23,8 +23,13 @@ edit_note_btn.addEventListener('click', function(){
 
 // form elements
 
-let new_note_submit = document.querySelector<HTMLInputElement>("#new-note-submit")
+let new_note_submit = document.getElementById("new-note-submit") as HTMLInputElement
+let edit_note_submit = document.querySelector<HTMLInputElement>("#edit-note-submit")
 
 new_note_submit.addEventListener('click', function(){
-  alert("<h1>Submitted</h1>")
+  alert("Submitted");
+});
+
+edit_note_submit.addEventListener('click', function(){
+  alert("submitted")
 })

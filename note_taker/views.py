@@ -17,7 +17,7 @@ def new_notes(request):
     category = request.POST.get('category')
     note = Notes(title=title, content=content, category=category)
     note.save()
-    return redirect("/")
+    return redirect("/all notes")
   return render(request, 'new_notes.html')
 
 def note(request, note_id):
