@@ -8,6 +8,11 @@
   <link href="/static/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+  <header>
+    <a href="{% url 'index' %}" class="active">Home</a>
+    <a href="{% url 'all_notes' %}">All Notes</a>
+    <a href="{% url 'new_notes' %}">New Notes</a>
+  </header>
   <main>
     {% block content %}{% endblock %}
   </main>
