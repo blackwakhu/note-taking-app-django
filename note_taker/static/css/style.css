@@ -177,3 +177,14 @@ input[type='text']{
   float: left;
   margin-left: 10%;
 }
+
+/* index.html */
+.index-content{
+  border: outset 2px purple;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  margin-left: 10%;
+  text-align: center;
+  margin-top: 40px;
+}

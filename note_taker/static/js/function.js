@@ -24,3 +24,47 @@ new_note_submit.addEventListener('click', function () {
 edit_note_submit.addEventListener('click', function () {
     alert("submitted");
 });
+document.addEventListener("DOMContentLoaded", function () {
+    var msg = {
+        "messages": ["you can create new notes!", "You can view your created notes!", "You can edit your notes!", "You can delete your notes!", "You can categorise your notes intelligently!"],
+        "index": 0,
+        "curr": 0,
+        "next": false,
+        "reverse": false
+    };
+    function change_msg(msg) {
+        if (msg.next == true) {
+            msg.next = false;
+            if (msg.index == msg.messages.length - 1) {
+                msg.index = 0;
+            }
+            else {
+                msg.index += 1;
+            }
+        }
+        if (msg.reverse == true) {
+            if (msg.curr == 0) {
+                msg.reverse = false;
+                msg.next = true;
+            }
+            else {
+                msg.curr -= 1;
+            }
+        }
+        else {
+            if (msg.curr == msg.messages.length - 1) {
+                msg.curr -= 1;
+                msg.reverse = true;
+            }
+            else {
+                msg.curr += 1;
+            }
+        }
+        var msg_div = document.querySelector(".msg-hello");
+        msg_div.textContent = msg.messages[msg.index].slice(0, 4);
+        return msg;
+    }
+    setInterval(function () {
+        msg = change_msg(msg);
+    }, 500);
+});
