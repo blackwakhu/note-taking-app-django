@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import get_object_or_404, redirect, render
 
 from .models import Notes
 
@@ -23,3 +23,8 @@ def new_notes(request):
 def note(request, note_id):
   item = get_object_or_404(Notes, pk=note_id)
   return render(request, 'note.html', {"item": item})
+
+def delete_note(request, note_id):
+  item = get_object_or_404(Notes, pk=note_id)
+  item.delete()
+  return redirect("/all notes/")
