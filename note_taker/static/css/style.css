@@ -136,3 +136,44 @@ input[type='text']{
   padding: 8px;
   font-size: 1.1em;
 }
+
+/* all notes page */
+
+.note-card{
+  margin-top: 10px;
+  border: solid 2px black;
+  width: 60%;
+  border-radius: 7px;
+  background: whitesmoke;
+  padding: 9px;
+}
+
+.note-detail a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.note-detail{
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+.note-card:hover{
+  background: #10898d;
+}
+
+.note-detail a:hover{
+  color: #ffff80;
+}
+
+.all-notes-table{
+  margin: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: rgba(255, 250, 240, .3);
+}
+
+.all-notes-table th{
+  float: left;
+  margin-left: 10%;
+}
