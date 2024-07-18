@@ -61,34 +61,76 @@
       </p>
     </div>
     <div class="edit-note-content">
-      <p>Hello world</p>
-      <form method="post" >
+      <h1>Edit {{item.title}}</h1>
+      <form method="post" action="{% url 'note' note_id=item.id %}">
         {% csrf_token %}
         <div class="new-note-input">
           <label for="title">Title:</label>
-          <input type="text" name="title" id="title" class="new-note-input" placeholder="to do list" required>
+          <input type="text" name="title" id="title" class="new-note-input" value="{{item.title}}" placeholder="to do list" required>
         </div>
         <div class="new-note-input">
           <label for="category">Category:</label>
           <select name="category" id="category" class="new-note-input" required>
             <optgroup label="Personnal">
-              <option value="Personnal">Personnal</option>
-              <option value="Family Affair">Family Affair</option>
-              <option value="Health">Health</option>
+              <option 
+                value="Personnal" 
+                {% if item.category == 'Personnal' %}
+                  selected
+                {% endif %}>
+                Personnal
+              </option>
+              <option 
+                value="Family Affair" 
+                {% if item.category == 'Family Affair' %}
+                  selected
+                {% endif %}>
+                Family Affair
+              </option>
+              <option 
+                value="Health"
+                {% if item.category == 'Health' %}
+                  selected
+                {% endif %}>
+                Health
+              </option>
             </optgroup>
             <optgroup label="Activities">
-              <option value="Study">Study</option>
-              <option value="Shopping">Shopping</option>
+              <option 
+                value="Study"
+                {% if item.category == 'Study' %}
+                  selected
+                {% endif %}>
+                  Study
+              </option>
+              <option 
+                value="Shopping" 
+                {% if item.category == 'Shopping' %}
+                  selected
+                {% endif %}>
+                  Shopping
+              </option>
             </optgroup>
             <optgroup label="Business">
-              <option value="Office">Office</option>
-              <option value="Work">Work</option>
+              <option 
+                value="Office" 
+                {% if item.category == 'Office' %}
+                  selected
+                {% endif %}>
+                Office
+              </option>
+              <option 
+                value="Work" 
+                {% if item.category == 'Work' %}
+                  selected
+                {% endif %}>
+                Work
+              </option>
             </optgroup>
           </select>
         </div>
         <div class="new-note-input">
           <label for="Content">Content:</label>
-          <textarea name="content" id="content" cols="30" class="new-note-input" rows="10" placeholder="write your notes here" required"></textarea>
+          <textarea name="content" id="content" cols="30" class="new-note-input" rows="10" placeholder="write your notes here" required">{{item.content}}</textarea>
         </div>
         <input type="submit" value="Submit"/>
       </form>
